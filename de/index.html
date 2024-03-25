@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Improved Eval</title>
+		<link rel="stylesheet" href="../css/style_m.css"
+			media="screen and (max-width: 800px)">
+		<link rel="stylesheet" href="../css/style_d.css"
+			media="screen and (min-width: 801px)">
+		<link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+		<link rel="manifest" href="../manifest.json">
+		<link rel="icon" type="image/png" sizes="512x192"
+			href="../favicons/favicon_512.png">
+		<link rel="icon" type="image/png" sizes="192x192"
+			href="../favicons/favicon_192.png">
+		<link rel="apple-touch-icon" sizes="180x180"
+			href="../favicons/favicon_180.png">
+		<link rel="icon" type="image/png" sizes="48x48"
+			href="../favicons/favicon_48.png">
+		<link rel="icon" type="image/png" sizes="32x32"
+			href="../favicons/favicon_32.png">
+		<link rel="icon" type="image/png" sizes="16x16"
+			href="../favicons/favicon_16.png">
+	</head>
+	<body>
+
+		<main>
+			<header>
+				<div class="lang_font">
+					<a class="icons" onclick="SwapLanguage()">
+						<div class="fa fa-language"></div>
+						<div class="Desktop">English</div>
+					</a>
+					<a class="icons" onclick="SwapFont()">
+						<div class="fa fa-font"></div>
+						<div class="Desktop">Font</div>
+					</a>
+					<a class="icons" onclick="SwapTheme()">
+						<div class="fa fa-moon-o" id="theme"></div>
+						<div class="Desktop">Dark</div>
+					</a>
+
+				</div>
+				<a class="title" id="title_page" onclick="UpdateWebsite()">Improved Eval</a>
+				<div class="l_update">last updated: 21.03.2024</div>
+			</header>
+			<div class="intro">
+
+				<h3>Vorwort:</h3>
+				<span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+					nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+					<br>
+					sed
+					diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+					Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+					sit amet.
+					<br>
+					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+					diam
+					nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+					<br> sed
+					diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+					Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+					sit amet.</span>
+				<div class="intro_middle" id="intro_middle">
+					<h4>Technische Bewertung:</h4>
+					<ul>
+						<li>
+							Überprüfen Sie die Kernfunktionalität und das Verständnis des Bewerteten
+							dafür (Ich habe das irgendwo gesehen/ChatGPT spiegelt das Wissen nicht
+							wider).
+						</li>
+						<li>
+							Überprüfen Sie das Build-System (Makefile).
+						</li>
+						<li>
+							Identifizieren Sie häufige Parsing-Fehler.
+						</li>
+						<li>
+							Überprüfen Sie auf Memory Leaks, inkorrekte Speicherverwaltung und
+							teilweise Lese-/Schreibvorgänge.
+						</li>
+						<li>
+							Erkunden Sie während der Entwicklung aufgetretene Herausforderungen und
+							diskutieren Sie Projekterkenntnisse, Testansätze und verwendete Tools.
+						</li>
+						<li>
+							Diskutieren Sie die während der Entwicklung implementierten
+							Teststrategien.
+						</li>
+						<li>
+							Diskussionen sollten informativ, prägnant, höflich und frei von externen
+							Einflüssen geführt werden.
+						</li>
+					</ul>
+				</div>
+
+				<div class="intro_middle" id="intro_middle">
+					<h4>Verhalten des Evaluators:</h4>
+					<ul>
+						<li>
+							Konzentrieren Sie sich ausschließlich auf die Durchführung der Bewertung
+							ohne Rücksicht auf Fristen.
+						</li>
+						<li>
+							Bewahren Sie Professionalität während der Diskussion und halten Sie sich
+							an die Bewertungskriterien.
+						</li>
+						<li>
+							Nach der Bewertung sollten Diskussionen abgeschlossen sein oder, falls
+							fortgeführt, auf konstruktiver und objektiver Ebene gehalten werden.
+						</li>
+						<li>
+							Normalisieren Sie die Suche nach einer Zweitmeinung, insbesondere bei der
+							Bewertung unbekannter Projekte (42 Heilbronn ist eine
+							Peer-Learning-Universität).
+						</li>
+						<li>
+							Streben Sie einen hohen Qualitätsstandard bezüglich der Code-Struktur und
+							Lesbarkeit an.
+						</li>
+						<li>
+							Teilen Sie Ihr Wissen über Code und vermeiden Sie das Durchfallen wegen
+							kleiner Fehler wie Tippfehler (Denken Sie darüber nach, was Menschen von
+							Ihnen lernen können, wenn Sie sie Fehler machen lassen).
+						</li>
+						<li>
+							Priorisieren Sie faire Bewertungen und vermeiden Sie manipulierte
+							Bewertungen, um enge Bekannte zu begünstigen (Ihre Freunde).
+						</li>
+						<li>
+							Wenn Sie einen Tester verwenden, der Fehler anzeigt, müssen Sie in der
+							Lage sein zu erklären, was der Tester tut und warum der Code fehlschlägt.
+							Andernfalls ist das kein Grund für ein Nichtbestehen.
+						</li>
+					</ul>
+				</div>
+
+				<div class="intro_middle" id="intro_middle">
+					<h4>Verhalten des Bewerteten:</h4>
+					<ul>
+						<li>
+							Übernehmen Sie die Verantwortung für Ihr Projekt, lernen Sie aus
+							Problemen bei der Einreichung und erkennen Sie Misserfolge als
+							Lernmöglichkeit an.
+						</li>
+						<li>
+							Vermeiden Sie es, Bewertungen mit voreingenommenen Meinungen zu
+							manipulieren, um faire Lernmöglichkeiten sicherzustellen (Buchen Sie
+							keine Bewertungen mit Ihren Freunden).
+						</li>
+						<li>
+							Geben Sie den Evaluatoren ehrliches Feedback darüber, wie sie die
+							Bewertung durchgeführt haben.
+						</li>
+						<li>
+							Buchen Sie nur eine Bewertung für einen einzelnen Slot und lassen Sie
+							genügend Raum für die Diskussionen (Eine halbe Stunde kann ziemlich kurz
+							für eine gründliche Bewertung sein).
+						</li>
+					</ul>
+				</div>
+				<div class="c_info">
+					<h5>Du benötigst Hilfe? Nutze die untenstehende Checkliste.</h5>
+					<span>(Schon bald wirst du sie nicht mehr brauchen.)</span>
+				</div>
+			</div>
+
+			<div class="checklist">
+				<div class="check_title">
+					<h3>Checkliste:</h3>
+				</div>
+
+				<div class="step">
+					<span class="c_title">1. Makefile</span>
+					<span class="c_text">Lorem ipsum dolor sit amet, consetetur sadipscing
+						elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+						aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+						dolores.</span>
+					<div class="c_btn_row">
+						<button class="c_btn true" id="true">YES</button>
+						<button class="c_btn false" id="false">NO</button>
+					</div>
+				</div>
+				<div class="spacer"></div>
+				<div class="step">
+					<span class="c_title">2. No-Makefile</span>
+					<span class="c_text">Lorem ipsum dolor sit amet, consetetur sadipscing
+						elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+						aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+						dolores.</span>
+					<div class="c_btn_row">
+						<button class="c_btn true" id="true">YES</button>
+						<button class="c_btn false" id="false">NO</button>
+					</div>
+				</div>
+				<div class="spacer"></div>
+				<div class="step">
+					<span class="c_title">3. BlaBlaBla</span>
+					<span class="c_text">Lorem ipsum dolor sit amet, consetetur sadipscing
+						elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+						aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+						dolores.</span>
+					<div class="c_btn_row">
+						<button class="c_btn true" id="true">YES</button>
+						<button class="c_btn false" id="false">NO</button>
+					</div>
+				</div>
+
+			</div>
+		</main>
+		<script src="../script.js"></script>
+	</body>
+</html>

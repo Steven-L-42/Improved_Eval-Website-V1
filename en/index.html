@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Improved Eval</title>
+		<link rel="stylesheet" href="../css/style_m.css"
+			media="screen and (max-width: 800px)">
+		<link rel="stylesheet" href="../css/style_d.css"
+			media="screen and (min-width: 801px)">
+		<link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+		<link rel="manifest" href="../manifest.json">
+		<link rel="icon" type="image/png" sizes="512x192"
+			href="../favicons/favicon_512.png">
+		<link rel="icon" type="image/png" sizes="192x192"
+			href="../favicons/favicon_192.png">
+		<link rel="apple-touch-icon" sizes="180x180"
+			href="../favicons/favicon_180.png">
+		<link rel="icon" type="image/png" sizes="48x48"
+			href="../favicons/favicon_48.png">
+		<link rel="icon" type="image/png" sizes="32x32"
+			href="../favicons/favicon_32.png">
+		<link rel="icon" type="image/png" sizes="16x16"
+			href="../favicons/favicon_16.png">
+	</head>
+	<body>
+
+		<main>
+			<header>
+				<div class="lang_font">
+					<a class="icons" onclick="SwapLanguage()">
+						<div class="fa fa-language"></div>
+						<div class="Desktop">Deutsch</div>
+					</a>
+					<a class="icons" onclick="SwapFont()">
+						<div class="fa fa-font"></div>
+						<div class="Desktop">Font</div>
+					</a>
+					<a class="icons" onclick="SwapTheme()">
+						<div class="fa fa-moon-o" id="theme"></div>
+						<div class="Desktop">Dark</div>
+					</a>
+
+				</div>
+				<a class="title" id="title_page" onclick="UpdateWebsite()">Improved Eval</a>
+				<div class="l_update">last updated: 21.03.2024</div>
+			</header>
+			<div class="intro">
+
+				<h3>Preamble:</h3>
+				<span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+					nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+					<br>
+					sed
+					diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+					Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+					sit amet.
+					<br>
+					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+					diam
+					nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+					<br> sed
+					diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+					Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+					sit amet.</span>
+				<div class="intro_middle" id="intro_middle">
+					<h4>Technical Assessment:</h4>
+					<ul>
+						<li>
+							Verify core functionality and the evaluatee’s understanding of it (I saw
+							this somewhere/chatGPT does not reflect knowledge).
+						</li>
+						<li>
+							check the build system (Makefile).
+						</li>
+						<li>
+							Identify common parsing errors.
+						</li>
+						<li>
+							Check for memory leaks, incorrect memory management, and partial
+							read/writes.
+						</li>
+						<li>
+							Explore challenges encountered during development and discuss project
+							learnings, testing approaches, and tools used.
+						</li>
+						<li>
+							Discuss testing strategies implemented during development.
+						</li>
+						<li>
+							Discussion should be conducted informative, concise, polite, and free
+							from external influences.
+						</li>
+					</ul>
+				</div>
+
+				<div class="intro_middle" id="intro_middle">
+					<h4>Evaluator Behavior:</h4>
+					<ul>
+						<li>
+							Focus solely on conducting the evaluation without the concern for
+							deadlines.
+						</li>
+						<li>
+							Maintain professionalism during discussion and adhere to evaluation
+							criteria.
+						</li>
+						<li>
+							After the evaluation, discussions should be concluded or if continued
+							kept on a constructive and objective level.
+						</li>
+						<li>
+							Normalize seeking a second opinion, especially when evaluating unfamiliar
+							projects (42 Heilbronn is a peer-learning university).
+						</li>
+						<li>
+							Aim for high-quality standard regarding code structure and readability.
+						</li>
+						<li>
+							Share code knowledge and avoid failing for minor errors like typos (think
+							about what people can learn from you letting them fail).
+						</li>
+						<li>
+							Prioritize fair evaluations, avoiding rigged assessments to benefit close
+							associates (your friends).
+						</li>
+						<li>
+							If using a tester which shows errors, you need to be able to explain what
+							the tester does and why the code fails. Otherwise that is not a fail
+							reason.
+						</li>
+					</ul>
+				</div>
+
+				<div class="intro_middle" id="intro_middle">
+					<h4>Evaluatee Behavior:</h4>
+					<ul>
+						<li>
+							Own responsibility for your project, learn from submission issues, and
+							recognize failure as a learning opportunity.
+						</li>
+						<li>
+							Avoid fixing evaluations with biased opinions to ensure fair learning
+							opportunities (do not book evaluations with your friends).
+						</li>
+						<li>
+							Give honest feedback to evaluators on how they conducted the evaluation.
+						</li>
+						<li>
+							Only book one evaluation for a single slot and leave enough room for the
+							discussions (half an hour can get quite short for a thorough evaluation).
+						</li>
+					</ul>
+				</div>
+
+				<div class="c_info">
+					<h5>Need help? Use the checklist below.</h5>
+					<span>(You won't need it for long.)</span>
+				</div>
+
+			</div>
+
+			<div class="checklist">
+				<div class="check_title">
+					<h3>Checkliste:</h3>
+				</div>
+
+				<div class="step">
+					<span class="c_title">1. Makefile</span>
+					<span class="c_text">Lorem ipsum dolor sit amet, consetetur sadipscing
+						elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+						aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+						dolores.</span>
+					<div class="c_btn_row">
+						<button class="c_btn true" id="true">YES</button>
+						<button class="c_btn false" id="false">NO</button>
+					</div>
+				</div>
+				<div class="spacer"></div>
+				<div class="step">
+					<span class="c_title">2. No-Makefile</span>
+					<span class="c_text">Lorem ipsum dolor sit amet, consetetur sadipscing
+						elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+						aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+						dolores.</span>
+					<div class="c_btn_row">
+						<button class="c_btn true" id="true">YES</button>
+						<button class="c_btn false" id="false">NO</button>
+					</div>
+				</div>
+				<div class="spacer"></div>
+				<div class="step">
+					<span class="c_title">3. BlaBlaBla</span>
+					<span class="c_text">Lorem ipsum dolor sit amet, consetetur sadipscing
+						elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+						aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+						dolores.</span>
+					<div class="c_btn_row">
+						<button class="c_btn true" id="true">YES</button>
+						<button class="c_btn false" id="false">NO</button>
+					</div>
+				</div>
+
+			</div>
+		</main>
+		<script src="../script.js"></script>
+	</body>
+</html>
